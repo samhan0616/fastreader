@@ -5,7 +5,7 @@ package edu.neu.ccs.reader;
  * @version 1.0
  * @since jdk 1.8
  */
-public class ReadFileThread extends Thread {
+public class ReadFileThread implements Runnable {
 
   private ReadFileListener processPoiDataListeners;
   private String filePath;
@@ -13,7 +13,6 @@ public class ReadFileThread extends Thread {
   private long end;
 
   public ReadFileThread(ReadFileListener processPoiDataListeners, long start, long end, String file) {
-    this.setName(this.getName()+"-ReadFileThread");
     this.start = start;
     this.end = end;
     this.filePath = file;

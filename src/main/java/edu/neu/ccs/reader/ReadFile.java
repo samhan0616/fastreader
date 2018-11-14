@@ -10,6 +10,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * ReadFile.
@@ -17,7 +19,7 @@ import java.nio.charset.StandardCharsets;
  * @version 1.0
  * @since jdk 1.8
  */
-public class ReadFile {
+public class ReadFile extends Observable {
 
   private int bufSize = 1024;
   // current line
